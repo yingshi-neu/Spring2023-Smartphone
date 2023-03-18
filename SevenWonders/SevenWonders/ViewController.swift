@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
-    let arr = ["Machu Picchu, Cusco Region", "Great Wall of China, Beijing", "Taj Mahal, Agra", "Colosseum,Rome", "Petra, Ma'an Governorate", "Chichén Itzá, Yucatán","Christ the Redeemer, Corcovado"]
+    let arr = ["Machu Picchu, Cusco Region", "Great Wall of China, Beijing", "Taj Mahal, Agra", "Colosseum, Rome", "Petra, Ma'an Governorate", "Chichén Itzá, Yucatán","Christ the Redeemer, Corcovado"]
     let imageNames = ["MachuPicchu","greatWall","tajMahal","Colosseom","Petra","chichenItza","christ"]
     
     //create an empty int for the later use
@@ -47,9 +47,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //before performing the segue, we will prepare/check if the identifier is the same
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "segueDetails" {
-            // cast the destination as SecondViewController
             let secondVC = segue.destination as! DetailsViewController
-            //set 2ndVC name to above
             secondVC.wonderNum = selectedWonder
             
         }
