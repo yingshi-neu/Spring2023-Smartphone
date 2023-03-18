@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="btc-0H-Vh5">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Stock App-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MakeAPICall" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter type symbol" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7oJ-cz-Vvj">
+                                <rect key="frame" x="20" y="329" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Company Name: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5m-y7-LRk">
+                                <rect key="frame" x="40" y="458" width="313" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ma-NJ-YjZ">
+                                <rect key="frame" x="40" y="514" width="313" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Website:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6hf-l4-LMB">
+                                <rect key="frame" x="40" y="573" width="313" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nka-QZ-xbZ">
+                                <rect key="frame" x="20" y="393" width="353" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Get Stock Details"/>
+                                <connections>
+                                    <action selector="getStockDetails:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jon-4f-wzr"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nka-QZ-xbZ" secondAttribute="trailing" constant="20" id="0Sy-Te-vUN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5Ma-NJ-YjZ" secondAttribute="trailing" constant="40" id="6Px-g4-CpO"/>
+                            <constraint firstItem="5Ma-NJ-YjZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="C3r-GE-Ytv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7oJ-cz-Vvj" secondAttribute="trailing" constant="20" id="CNv-JQ-P9a"/>
+                            <constraint firstItem="z5m-y7-LRk" firstAttribute="top" secondItem="nka-QZ-xbZ" secondAttribute="bottom" constant="30" id="JZD-sQ-kie"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="z5m-y7-LRk" secondAttribute="trailing" constant="40" id="KSE-Jg-sA1"/>
+                            <constraint firstItem="nka-QZ-xbZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RKJ-Ca-eiD"/>
+                            <constraint firstItem="nka-QZ-xbZ" firstAttribute="top" secondItem="7oJ-cz-Vvj" secondAttribute="bottom" constant="30" id="RSS-jV-QZv"/>
+                            <constraint firstItem="5Ma-NJ-YjZ" firstAttribute="top" secondItem="z5m-y7-LRk" secondAttribute="bottom" constant="39" id="b9T-l0-MPd"/>
+                            <constraint firstItem="z5m-y7-LRk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="gIy-ka-5ME"/>
+                            <constraint firstItem="6hf-l4-LMB" firstAttribute="top" secondItem="5Ma-NJ-YjZ" secondAttribute="bottom" constant="42" id="hee-Hx-DFO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="nka-QZ-xbZ" secondAttribute="trailing" id="lNC-p0-00h"/>
+                            <constraint firstAttribute="bottom" secondItem="z5m-y7-LRk" secondAttribute="bottom" constant="377" id="qjF-N9-oGm"/>
+                            <constraint firstItem="6hf-l4-LMB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="s2e-29-elY"/>
+                            <constraint firstItem="7oJ-cz-Vvj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wJ9-LO-7EZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6hf-l4-LMB" secondAttribute="trailing" constant="40" id="wzx-lb-klZ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Stock App" id="vGH-Th-FI2"/>
+                    <connections>
+                        <outlet property="lblCompanyName" destination="z5m-y7-LRk" id="dR2-f4-6km"/>
+                        <outlet property="lblPrice" destination="5Ma-NJ-YjZ" id="4ED-6i-ALL"/>
+                        <outlet property="lblWebsite" destination="6hf-l4-LMB" id="5hy-nb-Sll"/>
+                        <outlet property="txtStockSymbol" destination="7oJ-cz-Vvj" id="Hcn-Yd-0gD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="979.38931297709917" y="3.5211267605633805"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="A99-Ht-rAd">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="btc-0H-Vh5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="n77-8I-yIo">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="AAQ-bv-4zs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aao-k0-bix" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="52.671755725190835" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
